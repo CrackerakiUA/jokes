@@ -1,2 +1,1 @@
-export { Authenticated, Guest, Admins } from './guard';
-export { UserService } from './user.service';
+export { JokeService } from './joke.service';

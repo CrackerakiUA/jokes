@@ -1,1 +1,5 @@
+<label style="display: block">
+	<input type="checkbox" [checked]="dark" (change)="mode()" [ngModelOptions]="{standalone: true}"/>
+	<span>Dark Mode</span>
+</label>
 <router-outlet></router-outlet>

@@ -1,0 +1,9 @@
+<input type="text" [(ngModel)]="search" (ngModelChange)="page=0" placeholder="search">
+<div *ngFor="let joke of (js.jokes|search:search:'joke').slice(page*10, page*10+10)">
+	<p>{{joke.joke}} <a routerLink="/{{joke.id}}">Details</a></p>
+</div>
+<div *ngIf="(js.jokes|search:search:'joke').length">
+	<button (click)="page=page-1" *ngIf="page>0"><</button>
+	<span>{{page+1}}</span>
+	<button (click)="page=page+1" *ngIf="page*10+10<(js.jokes|search:search:'joke').length">></button>
+</div>
